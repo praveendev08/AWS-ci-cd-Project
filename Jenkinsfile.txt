@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone Repo') {
             steps {
-                git 'https://github.com/praveendev08/aws ci-cd project'
+                git 'https://github.com/praveendev08/AWS-ci-cd-Project'
             }
         }
 
@@ -26,3 +26,4 @@ pipeline {
         }
     }
 }
+
