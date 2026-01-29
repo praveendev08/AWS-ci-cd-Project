@@ -10,7 +10,7 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t username/aws-cicd:latest .'
+                sh 'docker build -t praveendev08/aws-cicd:latest .'
             }
         }
 
@@ -19,11 +19,12 @@ pipeline {
                 withCredentials([string(credentialsId: 'dockerhub-pass', variable: 'PASS')]) {
                     sh '''
                     echo $PASS | docker login -u username --password-stdin
-                    docker push username/aws-cicd:latest
+                    docker push praveendev08/aws-cicd:latest
                     '''
                 }
             }
         }
     }
 }
+
 
